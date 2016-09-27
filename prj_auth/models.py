@@ -1,3 +1,8 @@
-from django.db import models
+from django.contrib.auth.models import AbstractUser
 
-# Create your models here.
+
+class MyUser(AbstractUser):
+
+    class Meta:
+        verbose_name = 'мой пользователь'
+        verbose_name_plural = 'мои пользователи'

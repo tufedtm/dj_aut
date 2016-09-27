@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}login{% endblock %}
+
+{% block content %}
+  <form action="{% url 'prj_auth:login' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <input type="submit">
+  </form>
+
+  <p>
+    <a href="{% url 'prj_auth:registration' %}">registration</a>
+  </p>
+{% endblock %}

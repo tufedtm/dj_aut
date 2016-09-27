@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}home{% endblock %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+    <a href="{% url 'prj_auth:logout' %}">выйти</a>
+  {% endif %}
+{% endblock %}
